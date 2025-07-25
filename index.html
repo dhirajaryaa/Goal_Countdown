@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goal Countdown</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/assets/icon.svg" type="image/x-icon" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="A motivational countdown timer to help you stay focused on your goals, visualize your progress, and use every second wisely." />
+  <meta name="keywords" content="goal countdown, countdown timer, motivation, productivity, life timer, habit tracking, goals, personal development" />
+  <meta name="author" content="Dhiraj Arya" />
+
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- javascript  -->
+   <script src="logic.js" defer></script>
+</head>
+
+  <body>
+    <div class="grid" id="grid"></div>
+    <header>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <main id="container">
+      <h2 class="quotesbox">
+        <img src="/assets/quotes.svg" alt="quotes">
+        <span id="quote"> Your time is limited, so don’t waste it living someone else’s life. – Steve Jobs</span>
+           
+      </h2>
+      <h1 id="main-message">
+        Stop wasting time, it's ticking out of your hand
+      </h1>
+      <div class="highlight" id="goalDisplay" style="display: none"></div>
+
+      <form id="goal-form">
+        <input
+          type="text"
+          id="goal"
+          placeholder="Enter your goal..."
+          required
+        />
+        <input type="datetime-local" id="target" required />
+        <button type="submit">Start Countdown</button>
+      </form>
+
+      <div class="countdown" id="countdown" style="display: none">
+        <div class="unit"><span id="years">00</span><small>YEARS</small></div>
+        <div class="unit"><span id="months">00</span><small>MONTHS</small></div>
+        <div class="unit"><span id="days">00</span><small>DAYS</small></div>
+        <div class="unit"><span id="hours">00</span><small>HOURS</small></div>
+        <div class="unit">
+          <span id="minutes">00</span><small>MINUTES</small>
+        </div>
+        <div class="unit">
+          <span id="seconds">00</span><small>SECONDS</small>
+        </div>
+        <div class="unit"><span id="ms">000</span><small>MS</small></div>
+      </div>
+
+      <div id="progressDisplay"></div>
+    </main>
+  </body>
+</html>

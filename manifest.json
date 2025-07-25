@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Goal Countdown",
+  "description": "A motivational countdown timer to help you stay focused on your goals, visualize your progress, and use every second wisely.",
+  "version": "1.0",
+ 
+  
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*", "index.html", "style.css", "logic.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
